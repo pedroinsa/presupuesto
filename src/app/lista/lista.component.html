@@ -1,0 +1,25 @@
+<div>
+    <div>
+        <div class="text-center">
+            <h2>Lista de gastos</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 alert alert-success">
+                Presupuesto: <strong>{{presupuesto}}</strong>
+            </div>
+            <div class="col-lg-6" [ngClass]="color()">
+                Restante: <strong >{{restante}}</strong>
+            </div>
+
+        </div>
+        <div>
+            <ul class="list-group-flush">
+                <li class="list-group-item d-flex justify-content-between" *ngFor="let gasto of gastos">
+                    <span>{{gasto.nombre}} </span>
+                    <span  class="badge roundend-pill bg-secondary">{{gasto.cantidad}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

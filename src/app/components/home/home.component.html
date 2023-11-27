@@ -1,0 +1,16 @@
+<div class="flex row mt-5">
+    <div class="col-lg-6 offset-lg-3">
+
+        <h1 class="text-center titleFont text-white">Ingrese su presupuesto</h1>
+        <div class="d-flex flex-column card-body">
+            <div *ngIf="error" class="text-center">
+                <span class="badge bg-danger">El presupuesto debe ser mayor que cero</span>
+            </div>
+
+            <input  class="form-control" [(ngModel)]="cantidad" placeholder="monto de su presupuesto" type="number" />
+            <button class="btn btn-secondary btn-lg mt-2" (click)="agregarPresupuesto()">Aceptar</button>
+        </div>
+
+    </div>
+
+</div>

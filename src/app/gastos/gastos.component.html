@@ -1,0 +1,26 @@
+<div>
+    <div class="text-center">
+        <h2>Ingresa gasto</h2>
+    </div>
+    <div>
+        <span *ngIf="formularioIncorrecto" class="badge bg-danger">Debe ingresar un gasto mayor a 0</span>
+        <span *ngIf="formularioExceso" class="badge bg-danger">Debe ingresar un gasto menor al restante</span>
+    </div>
+    <div class=" d-flex flex-column">
+        <label class="fs-6" for="gasto">Cual es su gasto?</label>
+        <input [(ngModel)]="nombreGasto" id="gasto" class="form-control form-control-lg" type="text"
+            placeholder="Ej: Comida" />
+
+    </div>
+    <div class="d-flex flex-column">
+        <label for="cantidad">Cantidad</label>
+        <input [(ngModel)]="cantidad" id="cantidad" class="form-control" type="number" placeholder="costo del gasto" />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-secondary mt-2 buttonAgregar" (click)="agregarGasto()">AGREGAR GASTO</button>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-secondary mt-2 buttonInicio" (click)="volver()">REGRESAR</button>
+    </div>
+
+</div>
